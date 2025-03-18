@@ -1,21 +1,10 @@
-@media (prefers-color-scheme: dark) {
-    :root {
-      --text: #0f0a0a;
-      --background: #fcfcfc;
-      --primary: #091162;
-      --secondary: #c5c4b5;
-      --accent: #e0b31f;
-    }
-  }
-  @media (prefers-color-scheme: light) {
-    :root {
-      --text: #f5f0f0;
-      --background: #030303;
-      --primary: #9da4f6;
-      --secondary: #4a493a;
-      --accent: #e0b31f;
-    }
-  }
+:root {
+    --text: #0f0a0a;
+    --background: #fcfcfc;
+    --primary: #091162;
+    --secondary: #c5c4b5;
+    --accent: #e0b31f;
+}
 
 * {
     margin: 0;
@@ -88,7 +77,7 @@
     font-family: "Roboto";
     font-weight: 300;
     background-color: #E7E7E7;
-    border: none;
+    border: #b4b1b1 2px solid;
     min-height: 2.5em;
     font-size: 2rem;
     border-radius: 0.5em;
@@ -96,8 +85,13 @@
     padding: 0 1em;
 }
 
+.right input:focus::placeholder {
+    color: #bbb9b9;
+}
+
 .right input:focus {
     outline: none;
+    border: #666565 2px solid;
 }
 
 .flex {
@@ -146,7 +140,7 @@
     }
 
     .right h3 {
-        font-size: 2rem; /* 2, 4rem */
+        font-size: 2.5rem; /* 2, 4rem */
     }
 
     .right label {
@@ -159,15 +153,15 @@
 
     .login,
     .signup {
-        font-size: 1rem;
+        font-size: 1rem; /* 1rem */
         min-width: 180px; /* 180 360px */
         min-height: 40px; /* 40 80px */
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 992px) {
     html,body {
-        overflow-x: hidden; /* fixes white space on right */
+        overflow-x: hidden;
     }
 
     .wrapper {
