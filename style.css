@@ -22,9 +22,13 @@
     width: 50%;
     min-height: 100vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.left-content,
+.right-content {
+    padding: 0 4em;
 }
 
 /* left content */
@@ -32,10 +36,6 @@
 .left {
     background-color: var(--primary);
     color: var(--background);
-}
-
-.left-content {
-    padding: 7em;
 }
 
 .left h1 {
@@ -168,6 +168,10 @@
         display: block;
     }
 
+    .left-content {
+        width: 80%;
+    }
+    
     .left-content,
     .right-content {
         padding: 2em;
