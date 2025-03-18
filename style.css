@@ -1,0 +1,155 @@
+@media (prefers-color-scheme: dark) {
+    :root {
+      --text: #0f0a0a;
+      --background: #fcfcfc;
+      --primary: #091162;
+      --secondary: #c5c4b5;
+      --accent: #e0b31f;
+    }
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --text: #f5f0f0;
+      --background: #030303;
+      --primary: #9da4f6;
+      --secondary: #4a493a;
+      --accent: #e0b31f;
+    }
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* left and right content */
+
+.wrapper {
+    display: flex;
+}
+
+.left,
+.right {
+    width: 50%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-content,
+.right-content {
+    padding: 7em;
+}
+
+/* left content */
+
+.left {
+    background-color: var(--primary);
+    color: var(--background);
+}
+
+.left h1 {
+    font-family: "Raleway";
+    font-size: 3.5rem;
+}
+
+.left p {
+    font-family: "Roboto";
+    font-weight: 200;
+    font-size: 1.5rem;
+}
+
+/* right content */
+
+.right {
+    background-color: var(--background);
+    color: var(--text);
+}
+
+.right h3 {
+    font-family: "Raleway";
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 1em;
+}
+
+.right form {
+    font-family: "Roboto";
+    font-weight: 300;
+}
+
+.right label {
+    line-height: 2.5em;
+}
+
+.right input {
+    font-family: "Roboto";
+    font-weight: 300;
+    background-color: #E7E7E7;
+    border: none;
+    padding: 1em;
+    min-width: 300px;
+    margin-bottom: 1em;
+}
+
+.right input:focus {
+    outline: none;
+}
+
+.form-button {
+    text-align: center;
+}
+
+.login,
+.signup {
+    font-family: "Roboto";
+    font-size: 1rem;
+    font-weight: 300;
+    min-width: 180px;
+    min-height: 40px;
+    border-radius: 0.25em;
+    border: none;
+}
+
+.login {
+    color: var(--background);
+    background: var(--primary);
+    margin: 0.5em 0;
+}
+
+.signup {
+    color: var(--text);
+    background: var(--background);
+}
+
+/* media queries */
+
+@media (max-width: 1200px){
+    .right-content h3 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .wrapper {
+        display: block;
+    }
+
+    .left-content,
+    .right-content {
+        padding: 2rem;
+    }
+
+    .right-content h3 {
+        text-align: center;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+    }
+  }
+
