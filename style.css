@@ -140,7 +140,7 @@
 
     .left-content,
     .right-content {
-        padding: 2rem;
+        padding: 0;
     }
 
     .right-content h3 {
