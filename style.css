@@ -50,7 +50,6 @@
 .right {
     background-color: var(--background);
     color: var(--text);
-    align-items: center;
 }
 
 .right h3 {
@@ -70,9 +69,9 @@
     width: 100%;
 }
 
-.right label {
-    font-size: 1rem;
-    font-size: clamp(1rem, 0.9rem + 0.5vw, 1.5rem);
+.right input {
+    width: 80%;
+    margin: 0.5em auto;
 }
 
 .right input {
@@ -84,7 +83,6 @@
     font-size: clamp(1rem, 0.9rem + 0.5vw, 1.5rem);
     padding: 0.5em;
     border-radius: 0.25rem;
-    margin: 0.5em 0;
 }
 
 .right input:focus::placeholder {
@@ -106,7 +104,7 @@
     border-radius: 0.25em;
     border: none;
     margin: 0.25em auto;
-    width: 50%;
+    width: 40%;
 }
 
 .login {
