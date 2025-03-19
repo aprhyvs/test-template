@@ -6,11 +6,6 @@
     --accent: #e0b31f;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-}
-
 /* left and right content */
 
 .wrapper {
@@ -20,15 +15,11 @@
 .left,
 .right {
     width: 50%;
-    min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-}
-
-.left-content,
-.right-content {
-    padding: 0 4em;
+    padding: min(4em, 8%)
 }
 
 /* left content */
@@ -40,13 +31,18 @@
 
 .left h1 {
     font-family: "Raleway";
-    font-size: 6rem; /* 3.5rem */
+    font-weight: 700;
+    font-size: 2.5rem;
+    font-size: clamp(2.5rem, 2rem + 2.5vw, 5rem);
+    margin: 0.25em 0;
 }
 
 .left p {
     font-family: "Roboto";
+    font-size: 1rem;
+    font-size: clamp(1rem, 0.8rem + 1vw, 2rem);
     font-weight: 200;
-    font-size: 2.5rem; /* 1.5rem */
+    margin: 0.25em 0;
 }
 
 /* right content */
@@ -54,23 +50,29 @@
 .right {
     background-color: var(--background);
     color: var(--text);
+    align-items: center;
 }
 
 .right h3 {
     font-family: "Raleway";
     font-weight: 700;
-    font-size: 4rem; /* 2rem */
-    margin-bottom: 1em;
+    font-size: 2rem;
+    font-size: clamp(2rem, 1.6rem + 2vw, 4rem);
+    text-align: center;
+    margin: 0.5em 0;
 }
 
 .right form {
     font-family: "Roboto";
     font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 .right label {
-    font-size: 2rem; /* 16px */
-    line-height: 2.5em;
+    font-size: 1rem;
+    font-size: clamp(1rem, 0.9rem + 0.5vw, 1.5rem);
 }
 
 .right input {
@@ -78,11 +80,11 @@
     font-weight: 300;
     background-color: #E7E7E7;
     border: #b4b1b1 2px solid;
-    min-height: 2.5em;
-    font-size: 2rem;
-    border-radius: 0.5em;
-    margin-bottom: 1em;
-    padding: 0 1em;
+    font-size: 1rem;
+    font-size: clamp(1rem, 0.9rem + 0.5vw, 1.5rem);
+    padding: 0.5em;
+    border-radius: 0.25rem;
+    margin: 0.5em 0;
 }
 
 .right input:focus::placeholder {
@@ -94,32 +96,22 @@
     border: #666565 2px solid;
 }
 
-.flex {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.form-button {
-    text-align: center;
-}
-
 .login,
 .signup {
     font-family: "Roboto";
-    font-size: 2rem;
+    font-size: 1rem;
+    font-size: clamp(1rem, 0.9rem + 0.5vw, 1.5rem);
     font-weight: 300;
-    min-width: 360px; /* 180px */
-    min-height: 80px;
+    padding: 0.5em;
     border-radius: 0.25em;
     border: none;
+    margin: 0.25em auto;
+    width: 50%;
 }
 
 .login {
     color: var(--background);
     background: var(--primary);
-    margin-top: 1em;
-    margin-bottom: 0.5em;
 }
 
 .signup {
@@ -128,37 +120,6 @@
 }
 
 /* media queries */
-
-@media (max-width: 1600px) {
-    
-    .left h1 {
-        font-size: 3.5rem; /* 3.5, 6rem */
-    }
-
-    .left p {
-        font-size: 1.5rem; /* 1.5, 2.5rem */
-    }
-
-    .right h3 {
-        font-size: 2.5rem; /* 2, 4rem */
-    }
-
-    .right label {
-        font-size: 1rem; /* 1, 2rem */
-    }
-
-    .right input {
-        font-size: 1rem; /* 1, 2rem */
-    }
-
-    .login,
-    .signup {
-        font-size: 1rem; /* 1rem */
-        min-width: 180px; /* 180 360px */
-        min-height: 40px; /* 40 80px */
-    }
-}
-
 @media (max-width: 992px) {
     html,body {
         overflow-x: hidden;
@@ -166,19 +127,6 @@
 
     .wrapper {
         display: block;
-    }
-
-    .left-content {
-        width: 80%;
-    }
-    
-    .left-content,
-    .right-content {
-        padding: 2em;
-    }
-
-    .right-content h3 {
-        text-align: center;
     }
 
     .left,
